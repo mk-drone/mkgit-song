@@ -13,11 +13,11 @@
     "build:autoprefixer": "./node_modules/.bin/autoprefixer-cli style.css",
 
     
-    "watch": "./node_modules/.bin/parallelshell 'npm run watch:sass' 'npm run watch:autoprefixer' 'npm run watch:browsersync'",
+    "watch": "./node_modules/.bin/parallelshell 'npm run watch:sassprefixer' 'npm run watch:browsersync'",
     "watch:sassprefixer": "./node_modules/.bin/onchange -v style.scss -- npm run build",
     "watch:sass": "sass --watch style.scss:style.css",
     "watch:autoprefixer": "./node_modules/.bin/onchange -d 100 style.css -- ./node_modules/.bin/autoprefixer-cli style.css -o style.prefixed.css",
-    "watch:browsersync" : "./node_modules/.bin/browser-sync start -- server --files \"css/*.css\" \"*.html\""
+    "watch:browsersync" : "./node_modules/.bin/browser-sync start -- server --files \"*.css\" \"*.html\""
   },
   "keywords": [],
   "author": "",
